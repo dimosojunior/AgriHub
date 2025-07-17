@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Agri-Hub",
+    "slug": "Agri-Hub",
+    "version": "1.0.2",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "notification": {
+      "icon": "./assets/icon.png",
+      "color": "#ffffff"
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ttpc.AgriHub"
+    },
+    "android": {
+      "versionCode": 2,
+      "package": "ttpc.AgriHub",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "df9c7e6d-7786-42bc-9163-187ddc336fa3"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "cli": {
+    "version": ">= 5.0.2"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "app-bundle"
+       
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {}
+  }
+} 
