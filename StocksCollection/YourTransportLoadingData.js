@@ -421,30 +421,7 @@ const CartCard = ({item, index}) => {
     borderTopWidth: 1,
   }}>
 
-  {/* Delete Button */}
-  <TouchableOpacity
-    style={{
-      flexDirection: 'row',
-      alignItems: 'center',
-      backgroundColor: '#b00020',
-      paddingVertical: 8,
-      paddingHorizontal: 16,
-      borderRadius: 8,
-    }}
-   // onPress={handleDeletePost}
-  // onPress={() => navigation.navigate("Delete Taarifa Za Wakulima", { ...item, postId: item.id } )}
   
-
-  >
-    <FontAwesome name="trash" size={20} color="#fff" />
-    <Text style={{
-      color: '#fff',
-      marginLeft: 8,
-      fontFamily: 'Medium'
-    }}>
-      Delete
-    </Text>
-  </TouchableOpacity>
 
   {/* Update Button */}
   <TouchableOpacity
@@ -460,7 +437,7 @@ const CartCard = ({item, index}) => {
     //   // Weka navigation au logic ya update hapa
     //   navigation.navigate('UpdatePostScreen', { postId }); // mfano
     // }}
-    //onPress={() => navigation.navigate("Update Taarifa Za Wakulima", { ...item, postId: item.id } )}
+    onPress={() => navigation.navigate("Transporter Location Sender", item )}
   
   >
     <FontAwesome name="edit" size={20} color="#fff" />
@@ -469,7 +446,7 @@ const CartCard = ({item, index}) => {
       marginLeft: 8,
       fontFamily: 'Medium'
     }}>
-      Update
+      Send Location 
     </Text>
   </TouchableOpacity>
 </View>
@@ -515,7 +492,6 @@ const CartCard = ({item, index}) => {
  return (
 
 
-
 <Pressable>
   
 
@@ -545,7 +521,7 @@ const CartCard = ({item, index}) => {
   fontFamily:'Medium',
   marginTop:20,
 
-  }}>Full informations of this Transporter - ({item.TransporterFullName})</Text>
+  }}>Your Transport Loading Information </Text>
 </View>
 )}
       
@@ -613,6 +589,7 @@ const CartCard = ({item, index}) => {
 </View>
 
 
+
 {/* Last Row with Delete and Update buttons */}
 <View
   style={{
@@ -624,7 +601,7 @@ const CartCard = ({item, index}) => {
     borderTopWidth: 1,
   }}>
 
- 
+  
 
   {/* Update Button */}
   <TouchableOpacity
@@ -640,11 +617,7 @@ const CartCard = ({item, index}) => {
     //   // Weka navigation au logic ya update hapa
     //   navigation.navigate('UpdatePostScreen', { postId }); // mfano
     // }}
-    // onPress={() => navigation.navigate("View Buyer Confirmation",
-    //  { item,
-      
-
-    // } )}
+    onPress={() => navigation.navigate("Transporter Location Sender", item )}
   
   >
     <FontAwesome name="edit" size={20} color="#fff" />
@@ -653,10 +626,11 @@ const CartCard = ({item, index}) => {
       marginLeft: 8,
       fontFamily: 'Medium'
     }}>
-      Confirm
+      Send Location 
     </Text>
   </TouchableOpacity>
 </View>
+
 
 
 
@@ -678,11 +652,6 @@ const CartCard = ({item, index}) => {
 
 
 </Pressable>
-
-
-
-
-
 
 
 

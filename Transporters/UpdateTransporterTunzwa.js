@@ -242,26 +242,12 @@ useEffect(() => {
   const [MobileNumber, setMobileNumber] = useState('');
   const [ContactPerson, setContactPerson] = useState('');
    const [Location, setLocation] = useState('');
-
-   const [VehicleNo, setVehicleNo] = useState('');
-   const [VehicleType, setVehicleType] = useState('');
-   const [Driver, setDriver] = useState('');
-   const [DriverLicenceNo, setDriverLicenceNo] = useState('');
-   const [FeePerKm, setFeePerKm] = useState('');
-   const [RoutesSpecification, setRoutesSpecification] = useState('');
-   const [VehicleCapacity, setVehicleCapacity] = useState('');
-   const [VehicleStatus, setVehicleStatus] = useState('');
-   const [AvailabilityStatus, setAvailabilityStatus] = useState('');
-
-
-
-
   const [Email, setEmail] = useState('');
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
   const [gender, setGender] = useState('male');
-  const [Type, setType] = useState('company');
+  const [Type, setType] = useState('yes');
 
   const [countries, setCountries] = useState([]);
   const [countryQuery, setCountryQuery] = useState('');
@@ -394,18 +380,6 @@ useEffect(() => {
        setUsername(data.Username);
        setRegNo_TinNo(data.RegNo_TinNo.toString());
        setLocation(data.Location);
-
-       setVehicleNo(data.VehicleNo);
-       setVehicleType(data.VehicleType);
-       setDriver(data.Driver);
-       setDriverLicenceNo(data.DriverLicenceNo);
-       setFeePerKm(data.FeePerKm.toString());
-       setRoutesSpecification(data.RoutesSpecification);
-       setVehicleCapacity(data.VehicleCapacity);
-       setVehicleStatus(data.VehicleStatus);
-       setAvailabilityStatus(data.AvailabilityStatus);
-
-       
        setMobileNumber(data.MobileNumber.toString());
        setContactPerson(data.ContactPerson);
 
@@ -418,19 +392,13 @@ useEffect(() => {
 
        setEmail(data.Email);
        //setEducation(data.Education.Education);
-
-
-      //  setDay(data.EffectiveDate ? new Date(data.EffectiveDate).getDate().toString() : '');
-      // setMonth(data.EffectiveDate ? (new Date(data.EffectiveDate).getMonth() + 1).toString() : '');
-      // setYear(data.EffectiveDate ? new Date(data.EffectiveDate).getFullYear().toString() : '');
-      
        
        
 
 
         //console.log("Data fetched successfully");
       } catch (error) {
-       // handleErrorMessage(error);
+        handleErrorMessage(error);
         console.log("Error:", error);
       }
     }
@@ -481,8 +449,7 @@ useEffect(() => {
 
 
    // const date_of_birth = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
-  // const EffectiveDate = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
-  
+   
 
           // Append the array of Crops IDs
    
@@ -538,47 +505,6 @@ useEffect(() => {
         return;
     }
 
-
-
-  if (VehicleNo) {
-        formData.append('VehicleNo', VehicleNo);
-    } 
-
-  if (VehicleType) {
-        formData.append('VehicleType', VehicleType);
-    } 
-
-  if (Driver) {
-        formData.append('Driver', Driver);
-    } 
-
-if (DriverLicenceNo) {
-        formData.append('DriverLicenceNo', DriverLicenceNo);
-    } 
-
-if (FeePerKm) {
-        formData.append('FeePerKm', FeePerKm);
-    } 
-
-if (RoutesSpecification) {
-        formData.append('RoutesSpecification', RoutesSpecification);
-    } 
-
-if (VehicleCapacity) {
-        formData.append('VehicleCapacity', VehicleCapacity);
-    } 
-
-if (VehicleStatus) {
-        formData.append('VehicleStatus', VehicleStatus);
-    } 
-
-if (AvailabilityStatus) {
-        formData.append('AvailabilityStatus', AvailabilityStatus);
-    } 
-
-
-
-
        if (Email) {
         formData.append('Email', Email);
     } else {
@@ -624,19 +550,6 @@ if (AvailabilityStatus) {
     }
 
 
-
-    //  if (EffectiveDate) {
-    //     formData.append('EffectiveDate', EffectiveDate);
-    // } 
-
-
-
-
-// if (!day || !month || !year) {
-//       showAlertFunction('Please select full Effective Date of Transaction.');
-//       return;
-//     }
-
    
 
 
@@ -647,8 +560,7 @@ if (AvailabilityStatus) {
    // formData.append('ContactPerson', ContactPerson);
     //formData.append('Location', Location);
     //formData.append('Email', Email);
-    //formData.append('date_of_birth', date_of_birth);
-   //formData.append('EffectiveDate', EffectiveDate);
+   // formData.append('date_of_birth', date_of_birth);
     formData.append('country', selectedCountry);
     formData.append('region', selectedRegion?.name);
     formData.append('district', selectedDistrict?.name);
@@ -688,9 +600,9 @@ if (AvailabilityStatus) {
         setSelectedCountry('');
         setSelectedRegion('');
         setSelectedDistrict('');
-        setDay('');
-        setMonth('');
-        setYear('');
+        //setDay('');
+        //setMonth('');
+        //setYear('');
 
        // navigation.goBack();
        navigation.navigate("All Transporters");
@@ -898,106 +810,6 @@ style={globalStyles.AppChaguaHudumaTextHomeScreen}
           <Text>Individual</Text>
         </TouchableOpacity>
       </View>
-
-
-
-
-
-
-<Text style={[styles.label,{
-  marginTop:15,
-  marginBottom:15,
-  color:'wheat',
-}]}>Transport Route Informations</Text>
-
-
-<Text style={styles.label}>Vehicle Number</Text>
-      <TextInput value={VehicleNo} 
-      onChangeText={setVehicleNo}
-      //keyboardType="numeric" 
-      placeholder="vehicle number" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-
-<Text style={styles.label}>Vehicle Type</Text>
-      <TextInput value={VehicleType} 
-      onChangeText={setVehicleType}
-      //keyboardType="numeric" 
-      placeholder="vehicle type" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-
-<Text style={styles.label}>Driver Name</Text>
-      <TextInput value={Driver} 
-      onChangeText={setDriver}
-      //keyboardType="numeric" 
-      placeholder="driver name" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-
-<Text style={styles.label}>Driver Licence Number</Text>
-      <TextInput value={DriverLicenceNo} 
-      onChangeText={setDriverLicenceNo}
-      //keyboardType="numeric" 
-      placeholder="licence number" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-
-<Text style={styles.label}>Fee Per Km</Text>
-      <TextInput value={FeePerKm} 
-      onChangeText={setFeePerKm}
-      keyboardType="numeric" 
-      placeholder="transport fee per km" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-
-
-<Text style={styles.label}>Routes Specification</Text>
-      <TextInput value={RoutesSpecification} 
-      onChangeText={setRoutesSpecification}
-      //keyboardType="numeric" 
-      placeholder="Routes Specification" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-<Text style={styles.label}>Vehicle Capacity</Text>
-      <TextInput value={VehicleCapacity} 
-      onChangeText={setVehicleCapacity}
-      //keyboardType="numeric" 
-      placeholder="Vehicle Capacity" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-
-<Text style={styles.label}>Vehicle Status</Text>
-      <TextInput value={VehicleStatus} 
-      onChangeText={setVehicleStatus}
-      //keyboardType="numeric" 
-      placeholder="Vehicle Status" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-
-<Text style={styles.label}>Availability Status</Text>
-      <TextInput value={AvailabilityStatus} 
-      onChangeText={setAvailabilityStatus}
-      //keyboardType="numeric" 
-      placeholder="Availability Status" 
-      placeholderTextColor="wheat"
-      style={styles.input} />
-
-
-
-
-
-
-
-
 
 
 

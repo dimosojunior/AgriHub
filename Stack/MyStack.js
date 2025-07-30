@@ -120,6 +120,10 @@ import TransportLoadingOrdersItems from '../StocksCollection/TransportLoadingOrd
 
 import YourTransportLoadingData from '../StocksCollection/YourTransportLoadingData';
 
+import MapScreen from '../StocksCollection/MapScreen';
+
+import TransporterLocationSender from '../StocksCollection/TransporterLocationSender';
+import BuyerTrackVehicleScreen from '../StocksCollection/BuyerTrackVehicleScreen';
 
 const Stack = createStackNavigator();
 
@@ -796,6 +800,34 @@ function MyStack( {navigation}){
       //       headerLeft: () => <Header  title='About Page' />,
       //     })}
       />
+
+
+                <Stack.Screen
+      name="View Map"
+      component={MapScreen}
+      // options={ () => ({ 
+      //       headerLeft: () => <Header  title='About Page' />,
+      //     })}
+      />
+
+           <Stack.Screen
+      name="Transporter Location Sender"
+      component={TransporterLocationSender}
+      // options={ () => ({ 
+      //       headerLeft: () => <Header  title='About Page' />,
+      //     })}
+      />
+
+
+                 <Stack.Screen
+      name="Buyer Track Vehicle Screen"
+      component={BuyerTrackVehicleScreen}
+      // options={ () => ({ 
+      //       headerLeft: () => <Header  title='About Page' />,
+      //     })}
+      />
+
+      
 
       </Stack.Navigator>
       //	</NavigationContainer>

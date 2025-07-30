@@ -495,6 +495,42 @@ const CartCard = ({item, index}) => {
       Confirm
     </Text>
   </TouchableOpacity>
+
+
+   {/* Update Button */}
+  <TouchableOpacity
+    style={{
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: 'wheat',
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+    }}
+    // onPress={() => {
+    //   // Weka navigation au logic ya update hapa
+    //   navigation.navigate('UpdatePostScreen', { postId }); // mfano
+    // }}
+    // onPress={() => navigation.navigate("View Buyer Confirmation",
+    //  { item,
+      
+
+    // } )}
+
+   // onPress={() => handleConfirmation(item.id, true)}
+     onPress={() => navigation.navigate('View Map', item)}
+
+  
+  >
+    <FontAwesome name="check" size={20} color="black" />
+    <Text style={{
+      color: 'black',
+      marginLeft: 8,
+      fontFamily: 'Medium'
+    }}>
+      View on a Map
+    </Text>
+  </TouchableOpacity>
 </View>
 
 ):(
@@ -509,6 +545,7 @@ const CartCard = ({item, index}) => {
     borderTopColor: '#ccc',
     borderTopWidth: 1,
   }}>
+
 
  
 
@@ -543,19 +580,101 @@ const CartCard = ({item, index}) => {
       Cancel
     </Text>
   </TouchableOpacity>
+
+
+
+
+  <TouchableOpacity
+    style={{
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: 'wheat',
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+    }}
+    // onPress={() => {
+    //   // Weka navigation au logic ya update hapa
+    //   navigation.navigate('UpdatePostScreen', { postId }); // mfano
+    // }}
+    // onPress={() => navigation.navigate("View Buyer Confirmation",
+    //  { item,
+      
+
+    // } )}
+
+   // onPress={() => handleConfirmation(item.id, true)}
+     onPress={() => navigation.navigate('View Map', item)}
+
+  
+  >
+    <FontAwesome name="check" size={20} color="black" />
+    <Text style={{
+      color: 'black',
+      marginLeft: 8,
+      fontFamily: 'Medium'
+    }}>
+      View on a Map
+    </Text>
+  </TouchableOpacity>
+
 </View>
 
 
 )}
 
 
+{item.BuyerConfirmation === true && (
+<View
+  style={{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 15,
+    marginTop: 10,
+    borderTopColor: '#ccc',
+    borderTopWidth: 1,
+  }}>
 
 
+  <TouchableOpacity
+    style={{
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#00796b',
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+    }}
+    // onPress={() => {
+    //   // Weka navigation au logic ya update hapa
+    //   navigation.navigate('UpdatePostScreen', { postId }); // mfano
+    // }}
+    // onPress={() => navigation.navigate("View Buyer Confirmation",
+    //  { item,
+      
+
+    // } )}
+
+   // onPress={() => handleConfirmation(item.id, true)}
+   onPress={() => navigation.navigate("Buyer Track Vehicle Screen", item )}
+  
+  
+  >
+    <FontAwesome name="eye" size={20} color="#fff" />
+    <Text style={{
+      color: '#fff',
+      marginLeft: 8,
+      fontFamily: 'Medium'
+    }}>
+      Current Vehicle Location
+    </Text>
+  </TouchableOpacity>
 
 
+</View>
 
 
-
+)}
 
 
 
@@ -584,7 +703,6 @@ const CartCard = ({item, index}) => {
 
 
  return (
-
 
 
 <Pressable>
@@ -731,6 +849,42 @@ const CartCard = ({item, index}) => {
       Confirm
     </Text>
   </TouchableOpacity>
+
+
+   {/* Update Button */}
+  <TouchableOpacity
+    style={{
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: 'wheat',
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+    }}
+    // onPress={() => {
+    //   // Weka navigation au logic ya update hapa
+    //   navigation.navigate('UpdatePostScreen', { postId }); // mfano
+    // }}
+    // onPress={() => navigation.navigate("View Buyer Confirmation",
+    //  { item,
+      
+
+    // } )}
+
+   // onPress={() => handleConfirmation(item.id, true)}
+     onPress={() => navigation.navigate('View Map', item)}
+
+  
+  >
+    <FontAwesome name="check" size={20} color="black" />
+    <Text style={{
+      color: 'black',
+      marginLeft: 8,
+      fontFamily: 'Medium'
+    }}>
+      View on a Map
+    </Text>
+  </TouchableOpacity>
 </View>
 
 ):(
@@ -745,6 +899,7 @@ const CartCard = ({item, index}) => {
     borderTopColor: '#ccc',
     borderTopWidth: 1,
   }}>
+
 
  
 
@@ -779,19 +934,102 @@ const CartCard = ({item, index}) => {
       Cancel
     </Text>
   </TouchableOpacity>
+
+
+
+
+  <TouchableOpacity
+    style={{
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: 'wheat',
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+    }}
+    // onPress={() => {
+    //   // Weka navigation au logic ya update hapa
+    //   navigation.navigate('UpdatePostScreen', { postId }); // mfano
+    // }}
+    // onPress={() => navigation.navigate("View Buyer Confirmation",
+    //  { item,
+      
+
+    // } )}
+
+   // onPress={() => handleConfirmation(item.id, true)}
+     onPress={() => navigation.navigate('View Map', item)}
+
+  
+  >
+    <FontAwesome name="check" size={20} color="black" />
+    <Text style={{
+      color: 'black',
+      marginLeft: 8,
+      fontFamily: 'Medium'
+    }}>
+      View on a Map
+    </Text>
+  </TouchableOpacity>
+
 </View>
 
 
 )}
 
 
+{item.BuyerConfirmation === true && (
+
+<View
+  style={{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 15,
+    marginTop: 10,
+    borderTopColor: '#ccc',
+    borderTopWidth: 1,
+  }}>
 
 
+  <TouchableOpacity
+    style={{
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#00796b',
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+    }}
+    // onPress={() => {
+    //   // Weka navigation au logic ya update hapa
+    //   navigation.navigate('UpdatePostScreen', { postId }); // mfano
+    // }}
+    // onPress={() => navigation.navigate("View Buyer Confirmation",
+    //  { item,
+      
+
+    // } )}
+
+   // onPress={() => handleConfirmation(item.id, true)}
+   onPress={() => navigation.navigate("Buyer Track Vehicle Screen", item )}
+  
+  
+  >
+    <FontAwesome name="eye" size={20} color="#fff" />
+    <Text style={{
+      color: '#fff',
+      marginLeft: 8,
+      fontFamily: 'Medium'
+    }}>
+      Current Vehicle Location
+    </Text>
+  </TouchableOpacity>
 
 
+</View>
 
 
-
+)}
 
 
 

@@ -113,15 +113,19 @@ useEffect(() => {
       resizeMode="cover"
     />
   ) : (
-    <LottieView
-      style={{
-        height: height / 2,
+ 
+ <Image
+ style={{
+        alignItems: 'center',
         width: width,
+        justifyContent: 'center',
+        height: height / 2,
       }}
-      source={item?.OnboardingLotterView || require('../assets/Loading/1.json')} // fallback kama huna `item.OnboardingLotterView`
-      autoPlay
-      loop
-    />
+      resizeMode="cover"
+   source={require('../assets/1.jpg')} 
+      >
+      </Image>
+
   )}
 
   <View style={{
