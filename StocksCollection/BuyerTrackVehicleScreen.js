@@ -116,6 +116,7 @@ export default function BuyerTrackVehicleScreen({ route }) {
   return (
     <View style={{ flex: 1 }}>
       <MapView
+      provider="google"
         style={styles.map}
         initialRegion={{
           ...vehicleLocation,
